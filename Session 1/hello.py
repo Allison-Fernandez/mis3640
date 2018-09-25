@@ -1,17 +1,23 @@
-print ('Hello, Allison!')
+name = input()
+print('hello, ', name)
 
-print ('Hello, World!'
+# print ('Hello, Allison!')
 
-print 'Hello, World!'
+# print ('Hello, World!')
 
-print ('Hello, World!)
+# print ('Hello, World!')
 
-print (Hello, World!)
+# print ('Hello, World!')
 
-+3
+# print ('Hello, World!')
 
-2++2
+# +3
 
-02
+# 2++2
 
-3 5
+# 02
+
+# 3 5
+# print (2 + 2)
+# print(2+2)
+# print('Hello')
