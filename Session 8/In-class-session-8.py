@@ -54,24 +54,24 @@ team = 'New England Patriots'
 #     if letter == 'a':
 #         print(i, letter)
 
-word = 'New England Patriots'
-# count = 0
-# for letter in word:
-#     if letter == 'a':
-#         count = count + 1
-# print(count)
+# word = 'New England Patriots'
+# # count = 0
+# # for letter in word:
+# #     if letter == 'a':
+# #         count = count + 1
+# # print(count)
 
-def count(s, letter):
-    c = 0
-    for each in s:
-        if each == letter:
-            c += 1
-    return c
+# def count(s, letter):
+#     c = 0
+#     for each in s:
+#         if each == letter:
+#             c += 1
+#     return c
 
-print(count(team, 'a'))
+# print(count(team, 'a'))
 
-new_team = team.upper() #print team in uppercase letter
-print(new_team)
+# new_team = team.upper() #print team in uppercase letter
+# print(new_team)
 
-print(team.split())
-print(team.split('e')) #gets rid of the e
+# print(team.split())
+# print(team.split('e')) #gets rid of the e
