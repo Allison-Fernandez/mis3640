@@ -14,16 +14,22 @@ def nested_sum(t):
    
 print(nested_sum(t))
 
-# t = [1, 2, 3]
-# def cumsum(t):
-#     """Computes the cumulative sum of the numbers in t.
-#     t: list of numbers
-#     returns: list of numbers
-#     Expected output:
-#     >>> t = [1, 2, 3]
-#     >>> cumsum(t)
-#     [1, 3, 6]
-#     """
+t = [1, 2, 3]
+def cumsum(t):
+    """Computes the cumulative sum of the numbers in t.
+    t: list of numbers
+    returns: list of numbers
+    Expected output:
+    >>> t = [1, 2, 3]
+    >>> cumsum(t)
+    [1, 3, 6]
+    """
+    total = 0
+    res = []    #empty list that will be the filled with the new numbers and ultimatetly outputed
+    for x in t:
+        total += x
+        res.append(total)  #add the total to the res list
+    return res
     
     
 
