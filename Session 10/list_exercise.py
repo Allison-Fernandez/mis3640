@@ -48,23 +48,24 @@ def middle(t):
     """
     del t[0]
     del t[-1]
-    return t
+    return t 
+
+    
 print(middle(t))
 
-# def chop(t):
-#     """Removes the first and last elements of t.
-#     t: list
-#     returns: None
-#     Expected output:
-#     >>> t = [1, 2, 3, 4]
-#     >>> chop(t)
-#     >>> t
-#     [2, 3]
-#     """
-#     t.pop([0])
-#     t.pop([-1])
-#     return
-    
+def chop(t):
+    """Removes the first and last elements of t.
+    t: list
+    returns: None
+    Expected output:
+    >>> t = [1, 2, 3, 4]
+    >>> chop(t)
+    >>> t
+    [2, 3]
+    """
+    del t[0]
+    del t[-1]
+    return t 
 
 # print(chop(t))
 
