@@ -107,4 +107,8 @@ def print_hist(data):
     C: ******
     Z: ********
     '''
+
+
+
+    
     letter_counts={'C': 6, 'A': 3, 'B': 10, 'Z': 8}

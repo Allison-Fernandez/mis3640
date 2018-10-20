@@ -1,0 +1,4 @@
+read text file:
+1) open (...)
+2) tokenization
+    document => lines => words
