@@ -48,33 +48,58 @@ def different_words(hist): #DONE
     return len(hist)
 
 
-def most_common(hist):
+def most_common(hist, skip_stopwords=True):
     """Makes a list of word-freq pairs in descending order of frequency.
+    
     hist: map from word to frequency
+    excluding_stopwords: a boolean value. If it is True, do not include any stopwords in the list.
+
     returns: list of (frequency, word) pairs
     """
-    reversed(hist.items())
+    stopwords = process_file('Session 13\Stopwords.txt', False)
+    t = []
+    
+    for key, value in hist.items():
+        if skip_stopwords:
+            if key not in stopwords:
+                t.append((value, key))
+        else:
+            t.append((value, key))
+
+    t.sort()
+    t.reverse()
+    return t
 
 def print_most_common(hist, num=10):
     """Prints the most commons words in a histgram and their frequencies.
     hist: histogram (map from word to frequency)
     num: number of words to print
     """
-    pass
+    t = most_common(hist)
+    print('The most common words are:')
+    for freq, word in t[:num]:
+        print(word, '\t', freq)
 
 
 def subtract(d1, d2):
     """Returns a dictionary with all keys that appear in d1 but not d2.
     d1, d2: dictionaries
     """
-    pass
+    res = {}
+    for key in d1:
+        if key not in d2:
+            res[key] = None
+    return res
 
 
 def random_word(hist):
     """Chooses a random word from a histogram.
     The probability of each word is proportional to its frequency.
     """
-    return random.choice(hist)
+    t = []
+    for word, freq in hist.items():
+        t.extend([word] * freq)
+    return random.choice(t)
 
 
 def main():
@@ -87,7 +112,7 @@ def main():
     for freq, word in t[0:20]:
         print(word, '\t', freq)
 
-    words = process_file('words.txt', skip_header=False)
+    words = process_file('Session 9\words.txt', skip_header=False)
 
     diff = subtract(hist, words)
     print("The words in the book that aren't in the word list are:")
