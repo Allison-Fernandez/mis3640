@@ -4,7 +4,13 @@ from Time import *
 
 def days_until_birthday(birthday):
     """How long until my next birthday?"""
-
+    today = datetime.today()
+    
+    next_birthday = datetime(today.year, birthday.month, birthday.day)
+    if next_birthday < today:
+        next_birthday = datetime(today.year + 1, birthday.month, birthday.day)
+    delta = birthday - today
+    return delta.days
 
 def double_day(b1, b2):
     """Compute the day when one person is twice as old as the other.
@@ -24,7 +30,7 @@ def datetime_exercises():
 
     # compute the number of days until the next birthday
     # (note that it usually gets rounded down)
-    birthday = datetime(1997, 4, 1)
+    birthday = datetime(1997, 5, 17)
     print('Days until birthday', end=' ')
     print(days_until_birthday(birthday))
 

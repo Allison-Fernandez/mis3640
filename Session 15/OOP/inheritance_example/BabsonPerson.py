@@ -1,7 +1,7 @@
 from Person import Person
 
 
-class BabsonPerson(Person):
+class BabsonPerson(Person): #babsonperson is a descendant of person, so you put the ancestor in parenthesis when defining the new class
     nextIdNum = 0
     # next ID number to assign
 
@@ -20,7 +20,11 @@ class BabsonPerson(Person):
         return (self.name + " says: " + utterance)
 
 
-# p1 = BabsonPerson('Zhi')
-# p2 = BabsonPerson('Jack')
-# p3 = BabsonPerson('Steve')
-# p4 = Person('John')
+p1 = BabsonPerson('Zhi')
+p2 = BabsonPerson('Jack')
+p3 = BabsonPerson('Steve')
+p4 = Person('John')
+
+print(p2.speak("I feel good today."))
+
+# print(p4.speak("I don't feel good today."))
